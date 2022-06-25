@@ -11,13 +11,13 @@
     "docs": "typedoc --entryPointStrategy  expand --tsconfig ./tsconfig.json --excludeInternal --excludeProtected",
     "docs-hierarchy": "typedoc --entryPointStrategy  expand --tsconfig ./tsconfig.json --plugin ./node_modules/typedoc-theme-hierarchy/dist/index.js --theme hierarchy",
     "docs-github": "typedoc --theme github-wiki --entryPointStrategy  expand --tsconfig ./tsconfig.json  ",
-    "prepare": "husky install",
-    "release": "standard-version"
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "release": "standard-version"
     }
   },
   "lint-staged": {
